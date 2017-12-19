@@ -1,0 +1,20 @@
+.top-header
+    .auth-links
+        ul.auth-links__list
+            li.auth-links__item
+                .dropdown.show
+                    a.auth-links__link.dropdown-toggle(href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        i.icon-user
+                    .dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownMenuLink")
+                        span.dropdown-item
+                            strong
+                                | Авторизован как
+                            .text-muted
+                                | Dmitriy
+                        .dropdown-divider
+                        a.dropdown-item(href="#")
+                            | Панель пользователя
+
+                        a.dropdown-item(href="#")
+                            i.icon-logout
+                            | Выход

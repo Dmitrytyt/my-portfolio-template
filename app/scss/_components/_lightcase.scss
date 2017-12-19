@@ -1,0 +1,20 @@
+// Lightcase from Yandex map
+.lightcase-inlineWrap {
+  .main-img {}
+
+  .info {
+    color: #0f0f0f !important;
+  }
+}
+
+.lightcase-icon-close {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .lightcase-inlineWrap {
+    padding: 0 !important;
+  }
+}

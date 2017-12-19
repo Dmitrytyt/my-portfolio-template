@@ -1,0 +1,33 @@
+.top-bar {
+  display: none;
+
+  &__header {
+    .d-inline-block {
+      margin-right: 8/16+rem;
+      border-radius: 5/16+rem;
+    }
+
+    .navbar-brand {
+      padding: 0;
+      font-size: 2rem;
+      line-height: 1;
+    }
+  }
+
+  .navbar-dark {
+    background-color: #1F7EBD !important;
+
+    .navbar-toggler {
+      &:focus, &:active {
+        outline-color: #fff;
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-down(xs) {
+  .top-bar {
+    display: block;
+  }
+}

@@ -1,0 +1,77 @@
+include _common/_mixins
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        title
+            block title
+        meta(name="description" content="Shot description")
+        meta(name="keywords" content="keys")
+        meta(name="author" content="Author")
+        meta(name="MobileOptimized" content="320")
+        meta(name="HandheldFriendly" content="True")
+        include _common/_favicon
+
+        //build:css css/main.css
+        link(rel='stylesheet', href='css/main.css')
+        //endbuild
+
+        //build:css css/vendors.css
+        //bower:css
+        link(rel='stylesheet', href='bower_components/lightcase/src/css/lightcase.css')
+        //endbower
+        //endbuild
+
+        //build:css css/main.css
+        link(rel='stylesheet', href='css/main.css')
+        //endbuild
+
+        style(type="text/css")
+            block style
+
+    body(data-spy="scroll" data-target="#navObject" data-offset="140")
+        include _common/slade-menu/_slade-menu
+        #mainContent
+            .wrap.wrap-bg
+                include _common/header/_navbar-collapse
+                header.header
+                    .bg-menu-line
+                    .container
+                        include _common/header/_header
+                    block object_sections
+                .container.white-bg
+                    block image
+                .wrapper
+                    block content
+
+            include _common/footer/_footer
+        #root-picker-outlet
+
+        block scripts-api
+        //build:js js/vendors.js
+        //bower:js
+        script(src='bower_components/jquery/dist/jquery.js')
+        script(src='bower_components/tether/dist/js/tether.js')
+        script(src='bower_components/bootstrap/dist/js/bootstrap.js')
+        script(src='bower_components/vanilla-lazyload/dist/lazyload.min.js')
+        script(src='bower_components/emitter-es6/browser/index.js')
+        script(src='bower_components/slideout.js/dist/slideout.js')
+        script(src='bower_components/lightcase/src/js/lightcase.js')
+        script(src='bower_components/lightcase/vendor/jQuery/jquery.events.touch.js')
+        script(src='bower_components/hideshowpassword/hideShowPassword.js')
+        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js')
+        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js')
+        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js')
+        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.numeric.extensions.js')
+        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js')
+        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js')
+        //endbower
+        //endbuild
+
+        //build:js js/main.js
+        script(src="js/configs/slideout.config.js")
+        script(src="js/main.js")
+        //endbuild

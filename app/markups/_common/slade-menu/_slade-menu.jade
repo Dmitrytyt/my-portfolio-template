@@ -1,0 +1,36 @@
+nav#sladeMenu.menu
+    header.menu__header
+        i.js-slideout-close.toggle-button
+
+    .panel-group(id="accordion" role="tablist" aria-multiselectable="true")
+        .panel.panel-default
+            .panel-heading(role="tab" id="heading-1")
+                .panel-title
+                    a.panel-title__link(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1")
+                        | Главная
+        .panel.panel-default
+            .panel-heading(role="tab" id="heading-2")
+                .panel-title
+                    a.panel-title__link(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="true" aria-controls="collapse-2")
+                        | Контакты
+        .panel.panel-default
+            .panel-heading(role="tab" id="heading-3")
+                .panel-title
+                    a.panel-title__link(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="true" aria-controls="collapse-3")
+                        | Проекты
+        .panel.panel-default
+            .panel-heading(role="tab" id="headingOne")
+                .panel-title
+                    a.panel-title__link.has-children.dropdown-toggle(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                        i.icon-user
+                        span.size
+                            | Dmitriy
+                        i.fa.fa-lg.fa-angle-down
+            .panel-collapse.collapse(id="collapseOne" role="tabpanel" aria-labelledby="headingOne")
+                .panel-body
+                    ul.submenu__list.list-unstyled
+                        - var about   = ['Панель пользователя', 'Выход']
+                        each item, key in about
+                            li.submenu__list_item
+                                a.submenu__list_link(href="#")
+                                    | #{item}

@@ -1,0 +1,67 @@
+.footer {
+  bottom: 0;
+  width: 100%;
+
+  &__content {
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__logo {
+    margin-bottom: 1rem;
+  }
+
+  &__head-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  &__list {
+    padding-left: 2rem;
+  }
+
+  &__link {
+    color: #fff;
+
+    &:hover {
+      color: #4ebee4;
+    }
+  }
+
+  &__copyright {
+    position: relative;
+    min-height: 76px;
+  }
+
+  &__copyright-inner {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625em;
+    font-size: 1rem;
+  }
+
+  .icon-email {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: -6px;
+  }
+
+  .broken-link {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: -6px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .footer {
+
+    &__copyright {
+      min-height: 116/16+rem;
+    }
+
+    &__copyright-inner {
+      top:20%
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.header {
+  position: relative;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  > .container {
+    & + .container {
+      background: #fff;
+    }
+  }
+
+  @import "top-header";
+  @import "top-menu";
+
+  .logo {
+    display: block;
+    width: 156px;
+    height: 79px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    background: #ffffff;
+
+    &__min {
+      display: none;
+    }
+  }
+
+  .bg-menu-line {
+    background: #99cc33;
+    height: 2.5rem;
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+    -webkit-box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.2);
+    -moz-box-shadow:    0px 1px 2px -1px rgba(0,0,0,0.2);
+    box-shadow:         0px 1px 2px -1px rgba(0,0,0,0.2);
+  }
+}
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-down(xs) {
+
+  .header {
+    padding-top: 56/16+rem;
+
+    .container {
+      padding: 0;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .top-menu {
+      display: none;
+    }
+
+    .bg-menu-line {
+      display: none;
+    }
+  }
+
+}

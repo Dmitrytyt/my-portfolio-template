@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$s-close-name: 's-close';
+$s-close-x: 0px;
+$s-close-y: 34px;
+$s-close-offset-x: 0px;
+$s-close-offset-y: -34px;
+$s-close-width: 20px;
+$s-close-height: 20px;
+$s-close-total-width: 83px;
+$s-close-total-height: 78px;
+$s-close-image: '../img/main-sprite.png';
+$s-close: (0px, 34px, 0px, -34px, 20px, 20px, 83px, 78px, '../img/main-sprite.png', 's-close', );
+$s-exit-name: 's-exit';
+$s-exit-x: 30px;
+$s-exit-y: 34px;
+$s-exit-offset-x: -30px;
+$s-exit-offset-y: -34px;
+$s-exit-width: 18px;
+$s-exit-height: 18px;
+$s-exit-total-width: 83px;
+$s-exit-total-height: 78px;
+$s-exit-image: '../img/main-sprite.png';
+$s-exit: (30px, 34px, -30px, -34px, 18px, 18px, 83px, 78px, '../img/main-sprite.png', 's-exit', );
+$s-hand-key-name: 's-hand-key';
+$s-hand-key-x: 65px;
+$s-hand-key-y: 0px;
+$s-hand-key-offset-x: -65px;
+$s-hand-key-offset-y: 0px;
+$s-hand-key-width: 18px;
+$s-hand-key-height: 18px;
+$s-hand-key-total-width: 83px;
+$s-hand-key-total-height: 78px;
+$s-hand-key-image: '../img/main-sprite.png';
+$s-hand-key: (65px, 0px, -65px, 0px, 18px, 18px, 83px, 78px, '../img/main-sprite.png', 's-hand-key', );
+$s-log-in-name: 's-log-in';
+$s-log-in-x: 65px;
+$s-log-in-y: 28px;
+$s-log-in-offset-x: -65px;
+$s-log-in-offset-y: -28px;
+$s-log-in-width: 18px;
+$s-log-in-height: 18px;
+$s-log-in-total-width: 83px;
+$s-log-in-total-height: 78px;
+$s-log-in-image: '../img/main-sprite.png';
+$s-log-in: (65px, 28px, -65px, -28px, 18px, 18px, 83px, 78px, '../img/main-sprite.png', 's-log-in', );
+$s-required-mark-name: 's-required_mark';
+$s-required-mark-x: 24px;
+$s-required-mark-y: 64px;
+$s-required-mark-offset-x: -24px;
+$s-required-mark-offset-y: -64px;
+$s-required-mark-width: 8px;
+$s-required-mark-height: 8px;
+$s-required-mark-total-width: 83px;
+$s-required-mark-total-height: 78px;
+$s-required-mark-image: '../img/main-sprite.png';
+$s-required-mark: (24px, 64px, -24px, -64px, 8px, 8px, 83px, 78px, '../img/main-sprite.png', 's-required_mark', );
+$s-search-icon-name: 's-search-icon';
+$s-search-icon-x: 0px;
+$s-search-icon-y: 64px;
+$s-search-icon-offset-x: 0px;
+$s-search-icon-offset-y: -64px;
+$s-search-icon-width: 14px;
+$s-search-icon-height: 14px;
+$s-search-icon-total-width: 83px;
+$s-search-icon-total-height: 78px;
+$s-search-icon-image: '../img/main-sprite.png';
+$s-search-icon: (0px, 64px, 0px, -64px, 14px, 14px, 83px, 78px, '../img/main-sprite.png', 's-search-icon', );
+$s-user-login-name: 's-user-login';
+$s-user-login-x: 34px;
+$s-user-login-y: 0px;
+$s-user-login-offset-x: -34px;
+$s-user-login-offset-y: 0px;
+$s-user-login-width: 21px;
+$s-user-login-height: 21px;
+$s-user-login-total-width: 83px;
+$s-user-login-total-height: 78px;
+$s-user-login-image: '../img/main-sprite.png';
+$s-user-login: (34px, 0px, -34px, 0px, 21px, 21px, 83px, 78px, '../img/main-sprite.png', 's-user-login', );
+$s-user-name: 's-user';
+$s-user-x: 0px;
+$s-user-y: 0px;
+$s-user-offset-x: 0px;
+$s-user-offset-y: 0px;
+$s-user-width: 24px;
+$s-user-height: 24px;
+$s-user-total-width: 83px;
+$s-user-total-height: 78px;
+$s-user-image: '../img/main-sprite.png';
+$s-user: (0px, 0px, 0px, 0px, 24px, 24px, 83px, 78px, '../img/main-sprite.png', 's-user', );
+$spritesheet-width: 83px;
+$spritesheet-height: 78px;
+$spritesheet-image: '../img/main-sprite.png';
+$spritesheet-sprites: ($s-close, $s-exit, $s-hand-key, $s-log-in, $s-required-mark, $s-search-icon, $s-user-login, $s-user, );
+$spritesheet: (83px, 78px, '../img/main-sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

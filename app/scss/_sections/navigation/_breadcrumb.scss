@@ -1,0 +1,58 @@
+.breadcrumb {
+  &_life {
+    font-family: "Clear Sans", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    background: none;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    .breadcrumb-item {
+      color: #308db0;
+
+      &.active {
+        font-family: "Clear Sans Light", Helvetica, Arial, sans-serif;
+        color: #c2c2c1;
+      }
+
+      &::before {
+        color: #c2c2c1;
+      }
+
+    }
+  }
+
+}
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-down(xs) {
+  .breadcrumb {
+
+    &_life {
+      @include text-truncate();
+    }
+
+    .breadcrumb-item {
+      float: none;
+      display: none;
+
+      &:nth-child(2){
+        display: block;
+
+          &::after{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: .3em;
+            vertical-align: middle;
+            content: "";
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-left: .3em solid transparent;
+        }
+      }
+
+    }
+
+  }
+}
+

@@ -1,0 +1,28 @@
+extends ../_main
+
+block title
+    | Создание сайтов и сопровождение
+
+
+block content
+    .container
+        +breadcrumb([
+            {
+                name: 'Главная',
+                url: '/'
+            }
+        ], 'breadcrumb_life')
+        .row
+            .col-lg-3
+                aside
+                    include ../_common/left-sidebar/_left-sidebar
+            .col-lg-9
+                main
+                    h1.main-title
+                        | Разработка и сопровождение сайтов
+                    .text-descriptions
+                        .text-descriptions__content.text-descriptions__content_short
+                            p.text-justify.text-descriptions__text
+                                | Занимаюсь веб-разработкой с 2010 года.  Имеется опыт как FrontEnd, так и BackEnd разработки.
+                                | Знаком с seo-продвижением. Также имеется опыт отрисовки шаблонов в Фотошоп.
+                                | Я люблю свою работу и работа любит меня!

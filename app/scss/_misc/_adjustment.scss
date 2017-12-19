@@ -1,0 +1,187 @@
+/* --------- adjustment --------- */
+
+$footer-height      : 50px;
+$background         : #fff;
+$select-text        : #FFF9CD;
+$color-link         : #0069b6;
+$hover              : lighten($color-link, 20%);
+
+html {
+  //position: relative;
+  //min-height: 100%;
+}
+
+body {
+  //position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  width:100%;
+  height:100%;
+  background: $background;
+  min-width: 300px;
+  color: #39434c;
+  //margin-bottom: 330px;
+}
+
+#mainContent {
+  height: 100%;
+}
+
+a {
+  color: $color-link;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  &:hover {
+    text-decoration: none;
+    color: $hover;
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+*::selection {
+  color: #000;
+  background: $select-text none repeat scroll 0 0;
+  text-shadow: none;
+}
+
+.wrap-bg {
+  background: url('/img/sea-bg.jpg') no-repeat 0 40px;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
+.wrapper {
+  //position:relative;
+  padding-bottom: 4rem;
+
+  > .container {
+    background: #fff;
+  }
+}
+
+
+.title-header-2 {
+  color: #308db0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.main-title {
+  font-size: 2.5rem;
+  color: #39434c;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.page-title {
+  font-size: 4em;
+  color: #000;
+}
+
+#mainMap, #on-map {
+  width: 100%;
+  height: 550px;
+  background: #eceeef;
+}
+
+label.cm-required {
+  &::after{
+    @include sprite($s-required_mark);
+    content: ' ';
+    padding-right: 7px;
+    display: inline-block;
+  }
+}
+
+/*CONTRAST*/
+.contrast img {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+
+  &:hover{
+    -webkit-filter: contrast(165%);
+  }
+}
+
+.group:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden
+}
+
+.hide-elem {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Prevents img without src to appear */
+img:not([src]) {
+  visibility: hidden;
+}
+
+/* Fixes Firefox anomaly */
+@-moz-document url-prefix() {
+  img:-moz-loading {
+    visibility: hidden;
+  }
+}
+
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(md) {
+  .wrap {
+    min-height: calc(100vh - 92px);
+  }
+}
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-between(xs,sm) {
+
+  body {
+    //margin-bottom: 420px;
+  }
+
+  #mainContent {
+    height: 100%;
+    background: #fff;
+    -webkit-box-shadow: -4px 1px 9px 0px rgba(0,0,0,1);
+    -moz-box-shadow: -4px 1px 9px 0px rgba(0,0,0,1);
+    box-shadow: -4px 1px 9px 0px rgba(0,0,0,1);
+  }
+
+  .title-header-2 {
+    font-size: 28/16+rem;
+    padding-left: 0;
+  }
+
+  .main-title {
+    font-size: 24/16+rem;
+  }
+
+}
+
+@include media-breakpoint-down(md) {
+  aside.equal-column-height {
+    display: none !important;
+  }
+}

@@ -1,0 +1,28 @@
+mixin nav(classMix, activeIndex, activeSub, items, subMenu)
+    nav.navbar(class=((classMix) ? classMix + '__navbar' : ''))
+        ul.nav.navbar-nav(class= ((classMix) ? classMix + '__nav' : ''))
+            each item, idx in items
+                li.nav-item(class=((activeIndex == idx) ? classMix + '__nav-item_active' : '')
+                            class= ((classMix) ? classMix + '__nav-item' : ''))
+                    a.nav-link(class= ((classMix) ? classMix + '__nav-link' : '') href=item.link)=item.name
+                    if subMenu[idx]
+                        ul.sub-nav
+                            each it, index in subMenu[idx]
+                                li.sub-nav__item(class=((activeSub == index) ? 'sub-nav__item_active' : ''))
+                                    a.sub-nav__link(href='/location.html##{index}')=it
+
+mixin submenu(activeItem, items)
+    ul.sub-nav
+        each it, index in items
+            li.sub-nav__item(class=((activeItem == index) ? 'sub-nav__item_active' : ''))
+                a.sub-nav__link(href='catalog.html##{index}')=it
+
+mixin breadcrumb(items, customClass)
+    nav.breadcrumb(class=customClass)
+        i.icon-logo
+        each item, key in items
+            if(items.length - 1 !== key)
+                a.breadcrumb-item(href=item.url)=item.name
+            else
+                span.breadcrumb-item.active=item.name
+
