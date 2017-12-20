@@ -26,3 +26,8 @@ mixin breadcrumb(items, customClass)
             else
                 span.breadcrumb-item.active=item.name
 
+mixin listServices(items)
+    ul.services__list
+        each item in items
+            li.services__item=item
+

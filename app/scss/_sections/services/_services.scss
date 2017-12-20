@@ -1,0 +1,30 @@
+.services {
+  margin-bottom: 1rem;
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    display: block;
+    font-size: 0;
+  }
+
+  &__item {
+    font-family: "Clear Sans Light", Helvetica, Arial, sans-serif;
+    font-size: (14/16)+rem;
+    display: inline-block;
+    background: #efefef;
+    border-bottom: solid 1px #c5c5c5;
+    margin-right: (12/16)+rem;
+    margin-bottom: (12/16)+rem;
+    line-height: 1;
+    padding: 0.5rem;
+    border-radius: (3/16)+rem;
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(236, 236, 236, 1);
+    -moz-box-shadow:    0px 1px 1px 0px rgba(236, 236, 236, 1);
+    box-shadow:         0px 1px 1px 0px rgba(236, 236, 236, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
