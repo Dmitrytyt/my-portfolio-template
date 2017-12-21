@@ -47,6 +47,10 @@
 
 @include media-breakpoint-down(xs) {
   .footer {
+    &__copyright-inner {
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
 
     &__copyright {
       min-height: 116/16+rem;
@@ -54,6 +58,10 @@
 
     &__copyright-inner {
       top:20%
+    }
+
+    &__links {
+      float: none;
     }
   }
 }

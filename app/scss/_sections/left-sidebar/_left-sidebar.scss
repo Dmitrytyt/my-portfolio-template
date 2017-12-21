@@ -7,15 +7,21 @@
     max-height: 170/16+rem;
   }
 
-  &__location {
+  &__wrap {
     padding: 0 1rem 0 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   &__title {
     font-family: "Clear Sans", Helvetica, Arial, sans-serif;
     font-size: 1.375rem;
     color: #39434c;
+    display: block;
+  }
+
+  &__descriptions {
+    font-family: "Clear Sans Thin", Helvetica, Arial, sans-serif;
+    color: #768696;
     display: block;
   }
 
@@ -28,18 +34,11 @@
 
 }
 
-// Extra small devices (portrait phones, less than 544px)
-@include media-breakpoint-down(md) {
+
+@include media-breakpoint-down(xs) {
   .left-sidebar {
-
-    &__location {
-      display: none;
-    }
-
-    .filters {
-      .search-form {
-        //display: none;
-      }
+    &__wrap {
+      min-height: 80vh;
     }
 
   }

@@ -32,7 +32,7 @@ mixin listServices(items)
             li.services__item=item
 
 mixin card(items)
-    .card-deck-wrapper
+    .card-deck-wrapper.group
         each item, idx in items
             .card-deck
                 each it, id in item

@@ -9,13 +9,14 @@
 
     .navbar-brand {
       padding: 0;
-      font-size: 2rem;
+      font-size: 1.6rem;
       line-height: 1;
+      margin-top: 0.4rem;
     }
   }
 
   .navbar-dark {
-    background-color: #1F7EBD !important;
+    background-color: #99cc33 !important;
 
     .navbar-toggler {
       &:focus, &:active {
