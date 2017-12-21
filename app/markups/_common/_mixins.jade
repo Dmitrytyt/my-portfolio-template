@@ -31,3 +31,39 @@ mixin listServices(items)
         each item in items
             li.services__item=item
 
+mixin card(items)
+    .card-deck-wrapper
+        each item, idx in items
+            .card-deck
+                each it, id in item
+                    case idx === 1 && id === 2
+                        when true
+                            .card.tile-list.action
+                                .view.view-tenth
+                                    img.img-fluid(src="/img/objects/6.jpg")
+                                    .mask
+                                        h2 Ваш проект
+                                        p Заказать создание или разработку сайта очено просто. Просто заполните форму заказа или позвоните.
+                                        a.info(href="#")
+                                            | Заказать проект
+                        when false
+                            .card.tile-list
+                                .tile-list__title-star
+                                    h4.tile-list__title
+                                        a.tile-list__link(href="/object.html")=it.title
+                                .tile-list__link-img
+                                    a(href="/object.html" title="#{it.title}" alt="#{it.title}")
+                                        .contrast
+                                            img.tile-list__img.img-fluid(data-original="/img/objects/" + it.img)
+                                .card-block.tile-list__block
+                                    .stat-info
+                                        span.stat-info__loc=it.loc
+                                        span.stat-info__wrap
+                                            span.stat-info__photos
+                                                i.icon-image
+                                                | 5 фото
+                                    p.tile-list__text=it.text
+                                    a.card-link.tile-list__more-link(href="#")
+                                        | Подробнее
+                                    i.icon-right-arrow
+

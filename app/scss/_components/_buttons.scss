@@ -1,0 +1,26 @@
+.btn-out-line {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: .375rem 1rem;
+  font-size: 1rem;
+  border-radius: .125rem;
+  color: #99cc33;
+  background-color: transparent;
+  border:solid 1px #99cc33;
+  text-transform: uppercase;
+
+  &:hover, &:focus {
+    background-color: #99cc33;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}

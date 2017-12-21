@@ -1,5 +1,6 @@
 /* --------- normalize bootstrap--------- */
 @import "_components/bootstrap";
+@import "_components/buttons";
 
 /* --------- misc --------- */
 @import "_misc/_sprite";
@@ -10,6 +11,7 @@
 /* --------- components --------- */
 @import "_components/forms";
 @import "_components/lightcase";
+@import "_components/hover_effects";
 
 /* --------- sections --------- */
 @import "_sections/header/header";
@@ -22,3 +24,4 @@
 @import "_sections/footer/footer";
 @import "_sections/text/text-index";
 @import "_sections/services/services";
+@import "_sections/best-object/best_objects";

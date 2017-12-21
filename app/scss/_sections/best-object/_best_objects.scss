@@ -1,0 +1,239 @@
+.best-objects {
+  margin-bottom: 1.5rem;
+
+  .tile-list {
+    border: none;
+    font-family: "Clear Sans Light", Helvetica, Arial, sans-serif;
+
+    .stardom {
+      text-align: center;
+      line-height: normal;
+    }
+
+    &__title {
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      height: 30px;
+    }
+
+    &__link {
+      color: #39434c;
+      font-size: 1.375rem;
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: solid 1px #39434c;
+      }
+    }
+
+    &__block {
+      padding: 0 0 1.25rem 0;
+    }
+
+    .stat-info {
+      margin-top: .5625rem;
+      margin-bottom: .375rem;
+      padding-left: 1rem;
+
+      &__loc {
+        font-size: 1rem;
+        color: #39434c;
+      }
+
+      &__photos {
+        font-size: .875rem;
+        color: #768696;
+        padding-left: 1rem;
+      }
+
+      &__reviews {
+        font-size: .875rem;
+        padding-left: 1rem;
+      }
+    }
+
+    &__text {
+      color: #768696;
+      font-size: 14px;
+      text-align: justify;
+      line-height: 1.125rem;
+      text-indent: 1rem;
+      margin-bottom: 0;
+      overflow: hidden;
+      white-space: pre-wrap;
+      text-overflow: ellipsis;
+      height: 72px;
+    }
+
+    &__more-link {
+      font-size: 0.875rem;
+      margin-left: 1rem;
+
+      &:hover {
+        border-bottom: solid 1px #0069b6;
+      }
+    }
+
+    .icon-right-arrow{
+      @include sprite($s-right-arrow);
+      display: inline-block;
+      margin-left: 10px;
+      margin-bottom: -2px;
+    }
+
+    .icon-image {
+      @include sprite($s-icon-image);
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: -1px;
+    }
+
+    &.action {
+
+    }
+  }
+
+}
+
+// Large devices (desktops, less than 1200px)
+// @media (max-width: 1199px) { ... }
+@include media-breakpoint-down(lg) {
+  .best-objects {
+
+    .tile-list {
+
+      .stat-info {
+        &__wrap {
+          display: block;
+        }
+
+        &__photos {
+          padding-left: 0;
+        }
+
+      }
+
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-down(xs) {
+  .best-objects {
+
+    .card-deck-wrapper {
+
+      .card-deck {
+
+        &:last-child {
+
+          .tile-list {
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .tile-list {
+      padding-top: 1.75rem;
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.4rem;
+      border-bottom: solid 1px #efefef;
+      background: rgba(255,255,255,1);
+      background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(250,250,250,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa', GradientType=1 );
+
+      &__title-star {
+        .stardom {
+          position: absolute;
+          top:1.75rem;
+          left:0;
+          background: rgba(255,255,255,0.4);
+          padding: 0 0.25rem 0 0.25rem;
+          transition: all 0.3s ease;
+        }
+      }
+
+      &__title {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        text-align: left;
+      }
+
+      &__link {
+        font-size: 20/16+rem;
+        vertical-align: top;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      &__link-img {
+        width: 100/16+rem;
+        height: 80/16+rem;
+        float: left;
+        margin-right: 0.5rem;
+        overflow: hidden;
+      }
+
+      &__img {
+        max-width: 150/16+rem;
+      }
+
+      &__block {
+        padding: 0;
+      }
+
+      .stat-info {
+        padding:0;
+        margin: 0;
+      }
+
+      &__text,
+      &__more-link,
+      .icon-right-arrow {
+        display: none;
+      }
+
+    }
+
+  }
+}
+
+@media (max-width: 375px) {
+  .best-objects {
+
+    .tile-list {
+
+      &__link {
+        max-width: 280/16+rem;
+      }
+
+      .stat-info {
+
+        &__photos {
+          padding-right: 1rem;
+        }
+
+        &__reviews {
+          display: inline-block;
+          padding-left: 0;
+        }
+
+      }
+
+    }
+  }
+}
