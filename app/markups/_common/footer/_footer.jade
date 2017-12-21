@@ -3,4 +3,25 @@ footer#footer.footer
         hr
         .container
             .footer__copyright-inner
-                | © 2017 Разработка и сопровождение сайтов
+                | © 2017 Разработка и сопровождение сайтов #{' '}
+                a(href="mailto:turchenko-dm@ya.ru")
+                    | turchenko-dm@ya.ru
+            .footer__links
+                +listLinks([
+                    {
+                        class: 'github',
+                        link: 'https://github.com/Dmitrytyt',
+                        title: 'Профиль на гитхаб'
+                    },
+                    {
+                        class: 'telegram',
+                        link: 'https://telegram.me/+79184907782',
+                        title: 'Телеграмм'
+                    },
+                    {
+                        class: 'vk',
+                        link: 'https://vk.com/dmitrytyt',
+                        title: 'Вконтакте'
+                    }
+                ])
+

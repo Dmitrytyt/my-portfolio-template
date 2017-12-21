@@ -40,16 +40,8 @@
     font-size: 1rem;
   }
 
-  .icon-email {
-    display: inline-block;
-    margin-right: 8px;
-    margin-bottom: -6px;
-  }
-
-  .broken-link {
-    display: inline-block;
-    margin-right: 8px;
-    margin-bottom: -6px;
+  &__links {
+    float: right;
   }
 }
 

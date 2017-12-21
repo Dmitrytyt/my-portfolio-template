@@ -4,7 +4,24 @@
             img.left-sidebar__user-photo.rounded.img-fluid(src="/img/user/user.png")
             span.left-sidebar__title
                 | Дмитрий
-            br
-            a(href="tel:+79184908872")
-                span.left-sidebar__title
-                    | +7 918 490 88 72
+            a.left-sidebar__phone(href="tel:+79184908872")
+                | +79184908872
+            +listLinks([
+                {
+                    class: 'github',
+                    link:  'https://github.com/Dmitrytyt',
+                    title: 'Профиль на гитхаб'
+                },
+                {
+                    class: 'telegram',
+                    link:  'https://telegram.me/+79184907782',
+                    title: 'Телеграмм'
+                },
+                {
+                    class: 'vk',
+                    link:  'https://vk.com/dmitrytyt',
+                    title: 'Вконтакте'
+                }
+            ])
+            a(href="mailto:turchenko-dm@ya.ru")
+                | turchenko-dm@ya.ru

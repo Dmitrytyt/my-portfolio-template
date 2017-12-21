@@ -1,0 +1,41 @@
+$socials: ($s-github,github), ($s-telegram,telegram), ($s-vk,vk);
+
+.profile__list {
+  height: 34px;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+
+  .list__item {
+    display: inline-block;
+    margin-left: 15px;
+
+    .list__link {
+      display: inline-block;
+      height: 34px;
+      width: 34px;
+    }
+
+    @each $social, $name in $socials {
+      .#{$name} {
+        @include sprite($social);
+        opacity: 0.6;
+        transition: opacity 0.2s ease-in-out 0s;
+
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.2s ease-in-out 0s;
+        }
+
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+  }
+}
+
+.profile-links {
+
+}

@@ -67,3 +67,9 @@ mixin card(items)
                                         | Подробнее
                                     i.icon-right-arrow
 
+mixin listLinks(items)
+    ul.profile__list
+        each item in items
+            li.list__item
+                a.list__link(class=item.class href=item.link title=item.title target="_blank")
+
