@@ -73,3 +73,10 @@ mixin listLinks(items)
             li.list__item
                 a.list__link(class=item.class href=item.link title=item.title target="_blank")
 
+mixin sladeMenu(items)
+    .panel-group
+        each item, id in items
+            .panel.panel-default
+                .panel-heading
+                    .panel-title
+                        a.panel-title__link(role="button" href=item.link)=item.name

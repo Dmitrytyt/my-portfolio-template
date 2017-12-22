@@ -45,7 +45,7 @@
   }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-between(xs,sm) {
   .footer {
     &__copyright-inner {
       position: relative;
