@@ -80,3 +80,28 @@ mixin sladeMenu(items)
                 .panel-heading
                     .panel-title
                         a.panel-title__link(role="button" href=item.link)=item.name
+
+mixin listObjects(items)
+    each item in items
+        section.media.object(id='object'+item.id)
+            .media-left.object__main-img.contrast
+                a.object__main-img-link(href="/object.html")
+                    img.object__main-img-item(src=item.img data-original=item.img)
+                    img.object__main-img-item-tile.img-fluid(src=item.img_tile data-original=item.img_tile)
+            .media-body.object__content
+                a.object__title-link(href="/object.html")
+                    h2.object__title-item=item.title
+                .object__param
+                    span.object__param-item
+                        i.icon-image.icon
+                        | #{item.photo}
+                        span.object__statistics-text
+                            | фото
+                .object__contact
+                    .object__contact-item
+                        span.object__contact-item-caption.text-muted
+                            | #{' '} Описание проекта
+
+mixin setParam(list)
+    a.object__param-link.btn-on-map(href="#onmap" data-rel="lightcase" data-map=list)
+        | Посмотреть на карте

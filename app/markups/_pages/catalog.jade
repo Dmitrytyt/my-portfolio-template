@@ -1,0 +1,32 @@
+extends ../_main
+
+block title
+    | Проекты. Список выполненных работ.
+
+
+block content
+    .container
+        +breadcrumb([
+            {
+                name: 'Главная',
+                url: '/'
+            },
+            {
+                name: 'Список работ',
+                url: '/'
+            }
+        ], 'breadcrumb_life')
+        .row
+            .col-lg-3
+                aside
+                    include ../_common/left-sidebar/_left-sidebar
+            .col-lg-9
+                main
+                    h1.main-title
+                        | Список выполненных работ
+                    .text-descriptions
+                        .text-descriptions__content.text-descriptions__content_short
+                            p.text-justify.text-descriptions__text
+                                | В этом списке содержатся работы, которые когда-то были выполнены мной.
+                                | На самом деле их гораздо больше.
+                    include ../_common/list-objects/_list-objects

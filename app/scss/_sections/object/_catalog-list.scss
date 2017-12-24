@@ -1,0 +1,462 @@
+.catalog-list {
+
+  .list-content {
+
+    .search-warning {
+      margin-bottom: 1rem;
+
+      &__item {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem;
+        background-color: #fef7e5;
+        border: solid 1px #fc3;
+        display: none;
+      }
+
+    }
+
+    #listMap {
+      min-height: 500/16+rem;
+      background: #f3f3f3;
+      margin-bottom: 1rem;
+
+      .main-img {
+        float: left;
+        margin-right: 0.5rem;
+      }
+
+      .info {
+        margin-bottom: 0.5rem;
+      }
+
+    }
+  }
+
+  .list-header {
+    font-size: .875rem;
+    padding-bottom: 2px;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #e6e6e6;
+
+    &__link {
+      color: #0069b6;
+      border-bottom: dashed 1px #0069b6;
+
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+        border-bottom: none;
+      }
+    }
+
+    &__view-list {
+      text-align: right;
+    }
+
+    &__in-list, &__tile {
+      display: inline-block;
+      padding: 2px 12px 4px 12px;
+
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &_active {
+      background-color: #fee7a1;
+      color: #000;
+    }
+
+  }
+
+  .object {
+    padding-bottom: 0.8rem;
+    border-bottom: solid 1px #e6e6e6;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &__main-img-item-tile {
+      display: none;
+    }
+
+    &__title-link {
+      display: inline-block;
+      &:hover, &:focus{
+        text-decoration: none;
+        color: #4ebee4;
+      }
+    }
+
+    &__title-item {
+      font-size: 1.375rem;
+      margin-bottom: 0;
+      display: inline-block;
+    }
+
+    &__param {
+
+      &-item {
+        font-size: 0.875rem;
+        color: #768696;
+        margin-right: 1rem;
+        display: inline-block;
+      }
+
+    }
+
+    &__contact {
+      font-size: 0.875rem;
+      color:#39434c;
+    }
+
+    &__contact-caption {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+
+    &__statistics {
+      font-size: 0.875rem;
+      color: #768696;
+      padding: 0.5rem 0 0.5rem 0;
+
+      &-item {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+    }
+
+    &__intro {
+      font-size: 0.875rem;
+      color:#768696;
+      text-align: justify;
+
+      &-text {
+        line-height: 1.3;
+        margin-bottom: 0;
+      }
+    }
+
+    .icon-map {
+      margin-right: 5px;
+      margin-bottom: -2px;
+    }
+
+  }
+
+  // Tile style
+  &_tile {
+    .list-content {
+      margin-left: -15px;
+      margin-right: -15px;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      #listMap {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+
+    .object {
+      float: left;
+      width: 33.333333%;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+      border-bottom: none;
+
+      &__main-img {
+        display: block;
+        padding-right: 0;
+        padding-top: (70/16)+rem;
+        height: 200px;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+      }
+
+      &__main-img-item {
+        display: none;
+      }
+
+      &__main-img-item-tile {
+        display: block;
+      }
+
+      &__content {
+        display: block;
+        width: 100%;
+      }
+
+      .stars {
+        position: absolute;
+        top:0;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      &__title-link {
+        position: absolute;
+        top:(20/16)+rem;
+        left:0;
+        display: block;
+        width: 100%;
+        height: (47/16)+rem;
+        overflow: hidden;
+        text-align: center;
+        color: #39434c;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      &__title-item {
+        font-size: (20/16)+rem;
+      }
+
+      .views {
+        display: none;
+      }
+
+      &__contact-item {
+        height: (42/16)+rem;
+        overflow: hidden;
+        &:last-child {
+          display: none;
+        }
+      }
+
+      &__update {
+        display: none;
+      }
+
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: -1px;
+  }
+
+
+  .icon-image {
+    @include sprite($s-icon-image);
+  }
+
+  .icon-list {
+    @include sprite($s-icon-list);
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: -1px;
+  }
+
+  .icon-tile {
+    @include sprite($s-tile);
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: -1px;
+  }
+}
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-down(xs) {
+  .catalog-list {
+
+    .list-header {
+
+      &__view-list {
+        display: none;
+      }
+
+    }
+
+    .list-content {
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.4rem;
+      border-bottom: solid 1px #efefef;
+
+      .object {
+        position: relative;
+        padding-top: 30/16+rem;
+        background: rgba(255,255,255,1);
+        background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(250,250,250,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa', GradientType=1 );
+
+        .stars {
+          position: absolute;
+          top:1.75rem;
+          left:0;
+          background: rgba(255,255,255,0.4);
+          padding: 0 0.25rem 0 0.25rem;
+          margin-left: 0;
+          transition: all 0.3s ease;
+        }
+
+        &__title-item {
+          font-size: 20/16+rem;
+          line-height: 1;
+          vertical-align: top;
+          display: block;
+          height: 1.35rem;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        &__title-link {
+          position: absolute;
+          top:-3/16+rem;
+          left:0;
+          width: 100%;
+          text-align: left;
+        }
+
+        &__main-img {
+          width: 100/16+rem;
+          height: 80/16+rem;
+          float: left;
+          margin-right: 0.5rem;
+          overflow: hidden;
+        }
+
+        &__main-img-link {
+          display: block;
+        }
+
+        &__main-img-item {
+          max-width: 150/16+rem;
+        }
+
+        &__statistics {
+          padding-top: 0.25rem;
+        }
+
+        &__statistics-item {
+          margin-right: 8/16+rem;
+        }
+
+        &__statistics-text {
+          display: none;
+        }
+
+        &__intro-text {
+          display: none;
+        }
+
+        .icon {
+          margin-right: 2/16+rem;
+        }
+
+        .media-left,
+        .media-body  {
+          display: block;
+        }
+
+        .media-body  {
+          width: auto;
+          overflow: visible;
+        }
+
+      }
+
+    }
+
+    // Tile style
+    &_tile {
+      .list-content {
+        margin: 0;
+
+
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+
+      .object {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        position: relative;
+        border-bottom: solid 1px #e6e6e6;
+
+        &__main-img {
+          display: block;
+          padding-right: 0;
+          padding-top: 0;
+          height: auto;
+          overflow: visible;
+          margin-bottom: 0;
+        }
+
+        &__main-img-item {
+          display: block;
+        }
+
+        &__main-img-item-tile {
+          display: none;
+        }
+
+        &__content {
+          display: block;
+          width: 100%;
+        }
+
+        &__title-link {
+          text-align: left;
+          color: #0069b6;
+          padding: 0;
+        }
+
+        .views {
+          display: inline-block;
+        }
+
+        &__contact-item {
+          height: auto;
+          overflow: visible;
+
+          &:last-child {
+            display: block;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-between(sm, lg) {
+  .catalog-list {
+
+    // Tile style
+    &_tile {
+
+      .object {
+
+        &__main-img {
+          height: auto;
+        }
+
+      }
+
+    }
+
+  }
+}

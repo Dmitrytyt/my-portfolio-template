@@ -1,0 +1,52 @@
+.catalog-list.catalog-list_tile
+    .list-header
+        .row
+            .col-sm-6
+
+            .col-sm-6
+                .list-header__view-list
+                    a.list-header__in-list(href='#inlist')
+                        i.icon-list
+                        | Список
+                    a.list-header__tile.list-header_active(href='#tile')
+                        i.icon-tile
+                        | Плитка
+    .list-content
+        .search-warning
+            .search-warning__item
+        #listMap.collapse
+        +listObjects(
+            [
+                {
+                    id: 1,
+                    img: '/img/list-objects/1.jpg',
+                    img_tile: '/img/objects/1.jpg',
+                    title: 'Отель Три мушкетёра',
+                    photo: '5 '
+                }, {
+                    id: 2,
+                    img: '/img/list-objects/2.jpg',
+                    img_tile: '/img/objects/2.jpg',
+                    title: 'Пансионат Селена',
+                    photo: '6 '
+                }, {
+                    id: 3,
+                    img: '/img/list-objects/4.jpg',
+                    img_tile: '/img/objects/4.jpg',
+                    title: 'Кафе Кураж',
+                    photo: '7 '
+                }, {
+                    id: 4,
+                    img: '/img/list-objects/5.jpg',
+                    img_tile: '/img/objects/5.jpg',
+                    title: 'Смеси Пирамикс',
+                    photo: '5 '
+                }, {
+                    id: 5,
+                    img: '/img/list-objects/3.jpg',
+                    img_tile: '/img/objects/3.jpg',
+                    title: 'Комплекс Афалина',
+                    photo: '36 '
+                }
+            ]
+        )
