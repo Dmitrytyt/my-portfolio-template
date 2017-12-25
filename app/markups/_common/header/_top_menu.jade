@@ -1,11 +1,9 @@
 .top-menu
-    +nav('top-menu',
-         'main',
-         'price',
+    +nav('top-menu', active, active_sub,
     {
-        main: {
+        about: {
             name: 'Обо мне',
-            link: '/'
+            link: '/about.html'
         },
         list: {
             name: 'Проекты',
@@ -13,19 +11,19 @@
         },
         services: {
             name: 'Услуги',
-            link: '/catalog.html'
+            link: '/services.html'
         },
         summary: {
             name: 'Резюме',
-            link: '/on-map.html'
+            link: '/summary.html'
         },
         contacts: {
             name: 'Контакты',
-            link: '/on-map.html'
+            link: '/contacts.html'
         },
         menu: {
-            name: 'Меню',
-            link: '/catalog.html'
+            name: 'Еще ...',
+            link: '#moreMenu'
         }
     },{
         services: {
@@ -34,8 +32,10 @@
             price: 'Цены'
         },
         menu: {
-            main: 'Главная',
-            contacts: 'Контакты',
-            list: 'Проекты'
+            about: 'Обо мне',
+            catalog: 'Проекты',
+            services: 'Услуги',
+            summary: 'Резюме',
+            contacts: 'Контакты'
         }
     })

@@ -3,6 +3,10 @@ extends ../_main
 block title
     | Создание сайтов и сопровождение
 
+block header
+    - var active = false;
+    - var active_sub = '';
+    include ../_common/header/_header
 
 block content
     .container
