@@ -3,27 +3,27 @@
         .text-center
             img.left-sidebar__user-photo.rounded.img-fluid(src="/img/user/user.png")
             span.left-sidebar__title
-                | Дмитрий
+                | #{nameDeveloper}
             span.left-sidebar__descriptions.text-mutted
-                | Разработка и сопровождение сайтов
+                | #{nameSite}
             a.left-sidebar__phone(href="tel:+79184908872")
-                | +79184908872
+                | #{phone}
             +listLinks([
                 {
                     class: 'github',
-                    link:  'https://github.com/Dmitrytyt',
+                    link:  gitHubLink,
                     title: 'Профиль на гитхаб'
                 },
                 {
                     class: 'telegram',
-                    link:  'https://telegram.me/Dmitrytyt7',
+                    link:  telegramLink,
                     title: 'Телеграмм'
                 },
                 {
                     class: 'vk',
-                    link:  'https://vk.com/dmitrytyt',
+                    link:  vkLink,
                     title: 'Вконтакте'
                 }
             ])
-            a(href="mailto:turchenko-dm@ya.ru")
-                | turchenko-dm@ya.ru
+            a(href="mailto:#{email}")
+                | #{email}
