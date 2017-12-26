@@ -68,13 +68,11 @@ a {
   }
 }
 
-
 .title-header-2 {
   font-family: "Clear Sans Thin", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 
 .main-title {
   font-size: 2.5rem;
@@ -84,8 +82,13 @@ a {
 }
 
 .page-title {
-  font-size: 4em;
-  color: #000;
+  font-family: "Clear Sans Thin", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.title-bold {
+  font-family: "Clear Sans Bold", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
 }
 
 #mainMap, #on-map {
@@ -130,6 +133,11 @@ label.cm-required {
 
 .text-center {
   text-align: center;
+}
+
+.text-strong {
+  font-family: "Clear Sans Bold", Helvetica, Arial, sans-serif;
+  font-weight: 600;
 }
 
 /* Prevents img without src to appear */

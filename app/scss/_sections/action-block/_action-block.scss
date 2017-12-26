@@ -1,0 +1,19 @@
+.action-block {
+  background: #efefef;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  &__link {
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+
+  .icon-pdf {
+    @include sprite($s-pdf);
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+}

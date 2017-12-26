@@ -1,0 +1,46 @@
+.project {
+  margin: 0 auto 2rem;
+
+  &__browser {
+    background: url('/img/brouse.png') no-repeat;
+    position: relative;
+    max-width: 960px;
+    height: 732px;
+    padding: 70px 7px 7px 0;
+    margin: 0 auto;
+  }
+
+  &__link {
+    position: absolute;
+    left: 105px;
+    top: 47px;
+    color: #8f8f8f;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  &__window {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 655px;
+    overflow: auto;
+    border-radius: 0 0 0 10px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .project {
+    &__browser {
+      height: 300px;
+    }
+
+    &__window {
+      height: 228px;
+    }
+  }
+}

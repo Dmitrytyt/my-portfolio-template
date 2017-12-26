@@ -50,9 +50,9 @@ mixin card(items)
                             .card.tile-list
                                 .tile-list__title-star
                                     h4.tile-list__title
-                                        a.tile-list__link(href="/object.html")=it.title
+                                        a.tile-list__link(href=it.link)=it.title
                                 .tile-list__link-img
-                                    a(href="/object.html" title="#{it.title}" alt="#{it.title}")
+                                    a(href=it.link title="#{it.title}" alt="#{it.title}")
                                         .contrast
                                             img.tile-list__img.img-fluid(data-original="/img/objects/" + it.img)
                                 .card-block.tile-list__block
@@ -61,9 +61,9 @@ mixin card(items)
                                         span.stat-info__wrap
                                             span.stat-info__photos
                                                 i.icon-image
-                                                | 5 фото
+                                                | #{it.photo} фото
                                     p.tile-list__text=it.text
-                                    a.card-link.tile-list__more-link(href="#")
+                                    a.card-link.tile-list__more-link(href=it.link)
                                         | Подробнее
                                     i.icon-right-arrow
 
@@ -85,11 +85,11 @@ mixin listObjects(items)
     each item in items
         section.media.object(id='object'+item.id)
             .media-left.object__main-img.contrast
-                a.object__main-img-link(href="/object.html")
+                a.object__main-img-link(href=item.link)
                     img.object__main-img-item(src=item.img data-original=item.img)
                     img.object__main-img-item-tile.img-fluid(src=item.img_tile data-original=item.img_tile)
             .media-body.object__content
-                a.object__title-link(href="/object.html")
+                a.object__title-link(href=item.link)
                     h2.object__title-item=item.title
                 .object__param
                     span.object__param-item
@@ -100,7 +100,7 @@ mixin listObjects(items)
                 .object__contact
                     .object__contact-item
                         span.object__contact-item-caption.text-muted
-                            | #{' '} Описание проекта
+                            | #{item.descriptions}
 
 mixin setParam(list)
     a.object__param-link.btn-on-map(href="#onmap" data-rel="lightcase" data-map=list)

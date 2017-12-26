@@ -1,0 +1,105 @@
+extends ../_main
+
+block title
+    | Отель Три мушкетера
+
+block header
+    - var active = 'list';
+    - var active_sub = '';
+    include ../_common/header/_header
+
+block content
+    .container
+        +breadcrumb([
+            {
+                name: 'Главная',
+                url: '/'
+            },
+            {
+                name: 'Список работ',
+                url: '/catalog.html'
+            },
+            {
+                name: 'Три Мушкетера',
+                url: '/catalog/3mushketera.html'
+            }
+        ], 'breadcrumb_life')
+        main
+            h1.main-title
+                | Отель Три Мушкетера
+            .text-descriptions
+                .text-descriptions__content
+                    | У данного отеля уже давно существовал сайт с 2006 года. В 2017 году была произведена реконструкция здания.
+                    | В связи с чем появилась необходимость обновить интернет ресурс. Сайт очень старый. В вёрстке
+                    | использовалась еще табличная вёрстка. Форма отправки заявок, как выяснилось в последствии не работала.
+            h2.page-title.text-center
+                | Так выглядел сайт до изменения
+            .project
+                .project__browser
+                    .project__link
+                        | www.3mushketera.ru
+                    .project__window
+                        img.project__img(src="/img/projects/3mushketera/old-site.jpg")
+            h2.title-bold
+                | Этапы разработки
+            .text-descriptions
+                .text-descriptions__content
+                    | С заказчиком были согласованы следующие этапы разработки:
+                ul
+                    li
+                        | создание прототипа будущего сайта
+                    li
+                        | отрисовка дизайна
+                    li
+                        | верстка макета
+                    li
+                        | программирование
+
+            h2.page-title.text-center
+                | Прототип будущего сайта
+            .project
+                .project__browser
+                    .project__link
+                        | www.3mushketera.ru
+                    .project__window
+                        img.project__img(src="/img/projects/3mushketera/prototip.jpg")
+
+            h2.page-title.text-center
+                | Итоговый результат
+            .project
+                .project__browser
+                    .project__link
+                        | www.3mushketera.ru
+                    .project__window
+                        img.project__img(src="/img/projects/3mushketera/final.jpg")
+
+            section
+                h2.title-header-2
+                    | Используемые технологии
+                .services
+                    +listServices([
+                        'PHP',
+                        'JavaScript',
+                        'MySQL',
+                        'jQuery',
+                        'Git',
+                        'Ajax',
+                        'Sass',
+                        'Bootstrap4',
+                        'Адаптивная верстка',
+                        'Gulp',
+                        'HTML5',
+                        'PhotoShop',
+                        'Jade',
+                        'Bower'
+                    ])
+
+            .text-descriptions
+                p.text-descriptions__content
+                    | Сайт отеля:
+                    a(href="http://www.3mushketera.ru" target="_blank")
+                        | #{' '} http://www.3mushketera.ru
+
+
+
+
