@@ -1,0 +1,82 @@
+extends ../_main
+
+block title
+    | Сайт компании Пирамикс
+
+block header
+    - var active = 'list';
+    - var active_sub = '';
+    include ../_common/header/_header
+
+block content
+    .container
+        +breadcrumb([
+            {
+                name: 'Главная',
+                url: '/'
+            },
+            {
+                name: 'Список работ',
+                url: '/catalog.html'
+            },
+            {
+                name: 'Сайт компании Пирамикс',
+                url: '/catalog/piramix.html'
+            }
+        ], 'breadcrumb_life')
+        main
+            h1.main-title
+                | Сайт компании Пирамикс
+            .text-descriptions
+                .text-descriptions__content
+                    | Новой компании потребовался сайт.
+                    | Стояла задача за 14 дней сделать сайт. Что в итоге было и сделано.
+                    br
+                    | В результате работы над данным сайтом было сделано:
+                ul
+                    li
+                        | сверстан html шаблон на основе bootstrap3
+                    li
+                        | шаблон был интегрирован с программной частью сайта
+                    li
+                        | для администратора сайта написана панель управления контентом
+                    li
+                        | сайт был наполнен предоставленным контентом
+                    li
+                        | разработан калькулятор для расчёта расхода сухих смесей
+                    li
+                        | заведена корпоративная почта (почта для домена) для сотрудников
+
+
+            h2.page-title.text-center
+                | Итоговый результат
+            .project
+                .project__browser
+                    .project__link
+                        | piramix.ru
+                    .project__window
+                        img.project__img(src="/img/projects/piramix/final.jpg")
+
+
+            section
+                h2.title-header-2
+                    | Используемые технологии
+                .services
+                    +listServices([
+                        'PHP',
+                        'JavaScript',
+                        'MySQL',
+                        'jQuery',
+                        'Ajax',
+                        'Bootstrap3'
+                    ])
+
+            .text-descriptions
+                p.text-descriptions__content
+                    | Сайт компании:
+                    a(href="http://piramix.ru" target="_blank")
+                        | #{' '} http://piramix.ru
+
+
+
+

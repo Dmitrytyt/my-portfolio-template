@@ -34,7 +34,7 @@
   }
 
   .icon-login, .icon-hand-key,
-  .icon-logout, .icon-user {
+  .icon-logout, .icon-user, .icon-github {
     display: inline-block;
     margin-right: 0.25rem;
     vertical-align: middle;
@@ -57,68 +57,12 @@
     @include sprite($s-hand-key);
   }
 
+  .icon-github {
+    @include sprite($s-github-top);
+  }
+
 }
 
-.search {
-  float: right;
-  margin-top: 9px;
-  position: relative;
-
-  &__icon-bg {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 22px;
-    width: 26px;
-    background-color: #50b9ce;
-  }
-
-  &__icon {
-    @include sprite($s-search-icon);
-    position: absolute;
-    right: 6px;
-    top: 4px;
-  }
-
-  &__item {
-    height: 22px;
-    border: solid 1px #b6bec7;
-    display: block;
-    width: 160px;
-    padding: 0 25px 2px 13px;
-    font-size: 0.9em;
-    background-color: #fff;
-    color: #000;
-    line-height: 22px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-
-    &:focus {
-      background-color: #fef7e5;
-      border-color: #fc3;
-      box-shadow: none;
-      outline: 0 none;
-    }
-
-    &::-webkit-input-placeholder {
-      color: #b6bec7;
-    }
-
-    &:-moz-placeholder { /* Firefox 18- */
-      color: #b6bec7;
-    }
-
-    &::-moz-placeholder {  /* Firefox 19+ */
-      color: #b6bec7;
-    }
-
-    &:-ms-input-placeholder {
-      color: #b6bec7;
-    }
-  }
-}
 
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-down(xs) {

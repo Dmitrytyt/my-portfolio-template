@@ -32,3 +32,11 @@ block content
                         .text-descriptions__content.text-descriptions__content_short
                             p.text-justify.text-descriptions__text
                                 | Для связи со мной, пожалуйста, используйте следующие контактные данные:
+                            p.text-justify.text-descriptions__text
+                                | E-mail:
+                                a(href="mailto:#{email}")
+                                    | #{email}
+                                br
+                                | Телефон:
+                                a(href="tel:#{phone}")
+                                    | #{phone}

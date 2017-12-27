@@ -1,0 +1,78 @@
+extends ../_main
+
+block title
+    | Сайт базы отдыха Афалина
+
+block header
+    - var active = 'list';
+    - var active_sub = '';
+    include ../_common/header/_header
+
+block content
+    .container
+        +breadcrumb([
+            {
+                name: 'Главная',
+                url: '/'
+            },
+            {
+                name: 'Список работ',
+                url: '/catalog.html'
+            },
+            {
+                name: 'Сайт базы отдыха Афалина',
+                url: '/catalog/afalina.html'
+            }
+        ], 'breadcrumb_life')
+        main
+            h1.main-title
+                | Сайт базы отдыха Афалина
+            .text-descriptions
+                .text-descriptions__content
+                    | Это один из самых первых моих сайтов. Поддержкой данного сайта я занимаюсь с 2008 года.
+                    | В 2014 году был сделан редизайн сайта.
+                    br
+                    | В результате работы над данным сайтом было сделано:
+                ul
+                    li
+                        | сверстан html шаблон на основе bootstrap3
+                    li
+                        | шаблон был интегрирован с программной частью сайта
+                    li
+                        | для администратора сайта написана панель управления контентом
+                    li
+                        | сайт был наполнен контентом
+
+
+            h2.page-title.text-center
+                | Итоговый результат
+            .project
+                .project__browser
+                    .project__link
+                        | anapa-afalina.ru
+                    .project__window
+                        img.project__img(src="/img/projects/afalina/final.jpg")
+
+
+            section
+                h2.title-header-2
+                    | Используемые технологии
+                .services
+                    +listServices([
+                        'PHP',
+                        'JavaScript',
+                        'MySQL',
+                        'jQuery',
+                        'Ajax',
+                        'Bootstrap3'
+                    ])
+
+            .text-descriptions
+                p.text-descriptions__content
+                    | Сайт базы отдыха:
+                    a(href="http://anapa-afalina.ru" target="_blank")
+                        | #{' '} http://anapa-afalina.ru
+
+
+
+

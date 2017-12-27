@@ -1,0 +1,112 @@
+extends ../_main
+
+block title
+    | Сайт кафе Кураж
+
+block header
+    - var active = 'list';
+    - var active_sub = '';
+    include ../_common/header/_header
+
+block content
+    .container
+        +breadcrumb([
+            {
+                name: 'Главная',
+                url: '/'
+            },
+            {
+                name: 'Список работ',
+                url: '/catalog.html'
+            },
+            {
+                name: 'Сайт кафе Кураж',
+                url: '/catalog/kafekurage.html'
+            }
+        ], 'breadcrumb_life')
+        main
+            h1.main-title
+                | Сайт кафе Кураж
+            .text-descriptions
+                .text-descriptions__content
+                    | Небольшому кафе в Анапе потребовался сайт для доставки роллов, пиццы, суши.
+                    br
+                    | В результате работы над данным сайтом было сделано:
+                ul
+                    li
+                        | сверстан html шаблон на основе bootstrap3
+                    li
+                        | шаблон был интегрирован с программной частью сайта
+                    li
+                        | написана авторизация, регистрация, напоминание забытого пароля
+                    li
+                        | написана авторизация через популярные социальные сети
+                    li
+                        | написана корзина для добавления заказов
+                    li
+                        | разработан личный кабинет для пользователей
+                    li
+                        | в личном кабинете пользователя реализована возможность просмотра заказов
+                    li
+                        | для администратора сайта написана панель управления контентом, заказами
+                    li
+                        | запрограммированы формы для отправки данных (заявки, отзывы, контакты)
+                    li
+                        | сайт был наполнен контентом (более 200 блюд)
+                    li
+                        | произведена внутренняя оптимизация под поисковые системы
+                    li
+                        | а также другой функционал.
+
+            h2.page-title.text-center
+                | Итоговый результат
+            .project
+                .project__browser
+                    .project__link
+                        | kafekurage.ru
+                    .project__window
+                        img.project__img(src="/img/projects/kurage/final.jpg")
+
+            h2.page-title.text-center
+                | Личный кабинет пользователя
+            .project
+                .project__browser
+                    .project__link
+                        | kafekurage.ru
+                    .project__window
+                        img.project__img(src="/img/projects/kurage/lk.jpg")
+
+            h2.page-title.text-center
+                | Панель администратора
+            .project
+                .project__browser
+                    .project__link
+                        | kafekurage.ru
+                    .project__window
+                        img.project__img(src="/img/projects/kurage/admin.jpg")
+
+            section
+                h2.title-header-2
+                    | Используемые технологии
+                .services
+                    +listServices([
+                        'PHP',
+                        'JavaScript',
+                        'MySQL',
+                        'jQuery',
+                        'Ajax',
+                        'Bootstrap3',
+                        'Seo',
+                        'Адаптивная верстка',
+                        'PhotoShop'
+                    ])
+
+            .text-descriptions
+                p.text-descriptions__content
+                    | Сайт кафе:
+                    a(href="http://kafekurage.ru" target="_blank")
+                        | #{' '} http://kafekurage.ru
+
+
+
+
