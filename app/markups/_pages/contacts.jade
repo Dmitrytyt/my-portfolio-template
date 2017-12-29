@@ -3,6 +3,9 @@ extends ../_main
 block title
     | Контакты
 
+block scripts-api
+    script(src="https://www.google.com/recaptcha/api.js")
+
 block header
     - var active = 'contacts';
     - var active_sub = '';
@@ -40,3 +43,44 @@ block content
                                 | Телефон:
                                 a(href="tel:#{phone}")
                                     | #{phone}
+                            p.text-justify.text-descriptions__text
+                                | Вы также можете воспользоваться формой обратной связи. Напишите, пожалуйста, чем могу
+                                | я быть вам полезен.
+
+                #contact
+                    .contact-order
+                        form.form-order(data-action="/order.php")
+                            h4.contact-order__title
+                                | Форма обратной связи
+                            .contact-order__form-wrap
+                                .contact-order__form.life-form
+                                    .wrap-form
+                                        .life-form__group-addon
+                                            span.icon.icon-user
+                                            input(type="text" name="userName" class="life-form__item" placeholder="Ваше имя*")
+                                    .life-form__group.clearfix
+                                        .wrap-form
+                                            .life-form__group-item.life-form__group-addon.life-form-xs
+                                                span.icon.icon-email
+                                                input.life-form__item(type="email" name="email" class="life-form__item" placeholder="Электронная почта*")
+                                        .wrap-form
+                                            .life-form__group-item.life-form__group-addon.life-form-xs
+                                                span.icon.icon-smartphone
+                                                input.life-form__item(type="phone" name="phone" class="life-form__item phone-input" placeholder="Телефон*" data-inputmask="'alias': 'phone'")
+                                    .life-form__group-addon
+                                        .wrap-form
+                                            .life-form__group-addon
+                                                textarea.life-form__item-text(name="note" placeholder="Ваше сообщение*")
+
+                                    .life-form__group.clearfix
+                                        .wrap-form
+                                            .life-form__group-item.life-form__group-addon
+                                                .g-recaptcha(data-sitekey="6Ldalj4UAAAAAEAT_eZJqsnFVEHsU6vB6HOXzmkr")
+
+                                    .life-form__group-addon.text-lg-center.text-xs-center.view
+                                        a.submit-order(href="#send" class="info")
+                                            | Отправить сообщение
+                                        .contact-order__attention
+                                            span.asterisk
+                                                | * #{' '}
+                                            | Есть обязательные поля для заполнения

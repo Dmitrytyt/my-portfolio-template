@@ -60,3 +60,4 @@ app/bower_components/
 app/_main.jade
 app/*.html
 www/Apache-2.4_vhost.conf
+config/config.php

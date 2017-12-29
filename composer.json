@@ -1,0 +1,17 @@
+{
+    "name": "dmitrytyt/sender",
+    "description": "Sender contact form",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "google/recaptcha": "~1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitrytyt",
+            "email": "dmitrytyt@ya.ru"
+        }
+    ],
+    "minimum-stability": "alpha"
+}

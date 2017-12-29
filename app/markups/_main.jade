@@ -21,18 +21,16 @@ html(lang="ru-RU")
 
         //build:css css/vendors.css
         //bower:css
-        link(rel='stylesheet', href='bower_components/lightcase/src/css/lightcase.css')
+        link(rel='stylesheet', href='bower_components/animate.css/animate.css')
         //endbower
-        //endbuild
-
-        //build:css css/main.css
-        link(rel='stylesheet', href='css/main.css')
         //endbuild
 
         style(type="text/css")
             block style
 
-    body(data-spy="scroll" data-target="#navObject" data-offset="140")
+        block scripts-api
+
+    body
         include _common/slade-menu/_slade-menu
         #mainContent
             .wrap.wrap-bg
@@ -48,9 +46,9 @@ html(lang="ru-RU")
                     block content
 
             include _common/footer/_footer
+        include _common/section/_message
         #root-picker-outlet
 
-        block scripts-api
         //build:js js/vendors.js
         //bower:js
         script(src='bower_components/jquery/dist/jquery.js')
@@ -59,15 +57,9 @@ html(lang="ru-RU")
         script(src='bower_components/vanilla-lazyload/dist/lazyload.min.js')
         script(src='bower_components/emitter-es6/browser/index.js')
         script(src='bower_components/slideout.js/dist/slideout.js')
-        script(src='bower_components/lightcase/src/js/lightcase.js')
-        script(src='bower_components/lightcase/vendor/jQuery/jquery.events.touch.js')
-        script(src='bower_components/hideshowpassword/hideShowPassword.js')
-        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js')
-        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js')
-        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js')
-        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.numeric.extensions.js')
-        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js')
-        script(src='bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js')
+        script(src='bower_components/cleave.js/dist/cleave.js')
+        script(src='bower_components/cleave.js/dist/addons/cleave-phone.ru.js')
+        script(src='bower_components/animatedmodal/animatedModal.js')
         //endbower
         //endbuild
 
@@ -75,5 +67,9 @@ html(lang="ru-RU")
         script(src="js/configs/slideout.config.js")
         script(src="js/action.list.catalog.js")
         script(src="js/category.show.js")
+        script(src="js/messages.js")
+        script(src="js/validation.js")
+        script(src="js/sender.js")
+        script(src="js/contact.js")
         script(src="js/main.js")
         //endbuild

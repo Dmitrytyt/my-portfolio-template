@@ -1,0 +1,211 @@
+#messageScreen {
+  animation-duration: 0.6s;
+  background-color: rgb(45, 62, 80);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -9999;
+}
+
+.modal-container {
+  margin-top: 35/16+rem;
+}
+
+#messageScreen {
+  opacity: 1;
+  z-index: 9999;
+  display: none;
+}
+
+.user-callback {
+  max-width: 600px;
+  margin: 0 auto;
+
+  .message {
+    font-family: "Clear Sans Thin", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    margin-top: 4rem;
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .item {
+      font-size: 1.5rem;
+    }
+
+    .modal__link {
+      color: #5aeaff;
+    }
+  }
+
+  .user-callback__title {
+    color: #fff;
+    font-family: "Clear Sans Bold", Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    padding-right: 62/16+rem;
+  }
+
+  .life-form__label-title {
+    color: #fff;
+    font-family: "Clear Sans Light", Helvetica, Arial, sans-serif;
+  }
+
+  .btn-warning {
+    font-family: "Clear Sans Light", Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+
+  .life-form .group-form {
+    margin-bottom: 1rem;
+  }
+
+  .form-text__warning {
+    font-family: "Clear Sans Thin", Helvetica, Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .life-form .group-form.has-error .life-form__item,
+  .life-form .group-form.has-error .life-form__item-text {
+    background-color: rgba(255, 148, 146, 0.4);
+  }
+
+  .form-text.text-danger {
+    color: rgb(251, 105, 101) !important;
+  }
+
+  .life-form__group-addon {
+    margin-bottom: 0;
+  }
+}
+
+
+/************************************
+ * Animation Container
+************************************/
+#animation-container {
+  position: relative;
+  max-width: 968px;
+  bottom: -60px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+/*Resize Browser Animation*/
+@media (max-width: 767px) {
+  #browser-container {
+    width:550px;
+    height:auto;
+  }
+}
+@media (max-width: 600px) {
+  #browser-container {
+    width: 450px;
+    height: 273px;
+  }
+  #animation-container {
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  #browser-container {
+    width: 350px;
+    height: 212px;
+  }
+  #animation-container {
+    height: 242px;
+  }
+  .project-title {
+    font-size:35px;
+  }
+}
+@media (max-width: 400px) {
+  #browser-container {
+    width: 250px;
+    height: 152px;
+  }
+  #animation-container {
+    height: 184px;
+  }
+  .project-title {
+    font-size:25px;
+  }
+
+}
+
+/************************************
+ * Close button
+************************************/
+.closebt-container {
+  position: absolute;
+  top: 0;
+  width:100%;
+  text-align:right;
+  margin-top:20px;
+  padding-right: 20px;
+
+  .closebt {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor:pointer;
+
+    &:hover {
+      transform:rotate(90deg);
+    }
+  }
+
+}
+
+/************************************
+ * Modal Styles
+************************************/
+#modal-container {
+  position:relative;
+  margin-top:10px;
+  overflow:hidden;
+}
+
+
+/************************************
+ * SVG ANIMATIONS
+************************************/
+#browser-container {
+  position:relative;
+  top:500px;
+}
+
+
+#btn-openModal {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  opacity:0;
+
+}
+
+#cursor{
+  position:relative;
+  top:-100px;
+}
+
+#modal {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  opacity:0;
+}
+
+#modal-btn-close {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  opacity:0;
+}

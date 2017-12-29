@@ -12,6 +12,7 @@
 @import "_components/forms";
 @import "_components/lightcase";
 @import "_components/hover_effects";
+@import "_components/animated-modal";
 
 /* --------- sections --------- */
 @import "_sections/header/header";
@@ -29,3 +30,4 @@
 @import "_sections/object/catalog-list";
 @import "_sections/action-block/action-block";
 @import "_sections/project/project";
+@import "_sections/object/order";
